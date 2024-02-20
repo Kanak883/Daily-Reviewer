@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Review Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Review Tracker</h1>
+    <div class="form">
+      <label for="review">How was your day?</label>
+      <select id="review">
+        <option value="good">Good</option>
+        <option value="neutral">Neutral</option>
+        <option value="bad">Bad</option>
+      </select>
+      <button onclick="recordReview()">Record</button>
+    </div>
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="chart.js"></script>
+</body>
+</html>
