@@ -6,24 +6,41 @@
   <title>Daily Review Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color: #051923; color: #f1faee;">
   <div class="container">
     <h1>Daily Review Tracker</h1>
     <div class="form">
       <label for="review">How was your day?</label>
       <select id="review">
+        <option value="amazing">Amazing</option>
+        <option value="verygood">Very Good</option>
         <option value="good">Good</option>
-        <option value="neutral">Neutral</option>
+        <option value="justfine">Just Fine</option>
         <option value="bad">Bad</option>
+        <option value="justdie">Just Die Already</option>
       </select>
       <button onclick="recordReview()">Record</button>
     </div>
     <div class="message" id="message"></div>
+    <div class="table-container">
+      <table id="reviewTable">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Review</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="reviewBody">
+          <!-- Reviews will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
     <div class="chart-container">
       <canvas id="myChart"></canvas>
     </div>
   </div>
-  <script src="chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
