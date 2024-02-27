@@ -10,24 +10,85 @@
   <div class="container">
     <h1>Daily Review Tracker</h1>
     <div class="form">
-      <label for="review">How was your day?</label>
-      <select id="review">
-        <option value="amazing">Amazing</option>
-        <option value="verygood">Very Good</option>
-        <option value="good">Good</option>
-        <option value="justfine">Just Fine</option>
-        <option value="bad">Bad</option>
-        <option value="justdie">Just Die Already</option>
+      <label for="question1">How well did I prioritize my tasks today?</label>
+      <select id="question1" class="question-dropdown">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
       </select>
-      <button onclick="recordReview()">Record</button>
+      <label for="question2">How efficiently did I manage my time?</label>
+      <select id="question2" class="question-dropdown">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <label for="question3">How effectively did I handle challenges or obstacles?</label>
+      <select id="question3" class="question-dropdown">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <label for="question4">How productive was my day overall?</label>
+      <select id="question4" class="question-dropdown">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <label for="question5">How well did I communicate with others?</label>
+      <select id="question5" class="question-dropdown">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <button id="recordButton" onclick="recordReview()">Record</button>
     </div>
     <div class="message" id="message"></div>
     <div class="table-container">
       <table id="reviewTable">
         <thead>
           <tr>
-            <th>Day</th>
-            <th>Review</th>
+            <th>Date</th>
+            <th>How well did I prioritize my tasks today?</th>
+            <th>How efficiently did I manage my time?</th>
+            <th>How effectively did I handle challenges or obstacles?</th>
+            <th>How productive was my day overall?</th>
+            <th>How well did I communicate with others?</th>
+            <th>Average Rating</th>
             <th>Action</th>
           </tr>
         </thead>
