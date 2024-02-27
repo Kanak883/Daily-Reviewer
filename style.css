@@ -1,62 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    color: #f1faee; /* Set text color of container */
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  .form {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  select {
-    margin-bottom: 10px;
-    width: 100%;
-    padding: 8px;
-  }
-  
-  button {
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .chart-container {
-    margin-top: 20px;
-  }
-  
-  .table-container {
-    margin-bottom: 20px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-    color: black; /* Set text color of top row */
-  }
-  
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #f1faee; /* Set text color of container */
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.chart-container {
+  margin-top: 20px;
+}
+
+.table-container {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: black; /* Set text color of top row */
+}
