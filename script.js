@@ -143,6 +143,32 @@ function updateChart() {
     }
   });
 }
+// Function to save reviews to Google Drive
+function saveReviewsToDrive() {
+  gapi.auth2.getAuthInstance().signIn().then(function() {
+    const reviewsData = JSON.stringify(dailyReviews);
+    const fileMetadata = {
+      'name': 'daily_reviews.json',
+      'mimeType': 'application/json'
+    };
+    const media = {
+      mimeType: 'application/json',
+      body: reviewsData
+    };
+    gapi.client.drive.files.create({
+      resource: fileMetadata,
+      media: media,
+      fields: 'id'
+    }).then(function(response) {
+      console.log('File ID:', response.result.id);
+      displayMessage('Reviews saved to Google Drive successfully!');
+    }).catch(function(error) {
+      console.error('Error saving reviews to Google Drive:', error);
+      displayMessage('Error saving reviews to Google Drive.');
+    });
+  });
+}
+
 
 // Call retrieveReviewsFromStorage() when the page loads to retrieve reviews from local storage
 window.onload = retrieveReviewsFromStorage;
