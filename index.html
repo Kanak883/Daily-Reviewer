@@ -76,6 +76,8 @@
         <option value="10">10</option>
       </select>
       <button id="recordButton" onclick="recordReview()">Record</button>
+      <!-- Button to save reviews to Google Drive -->
+      <button id="saveToDriveButton" onclick="saveReviewsToDrive()">Save Reviews to Google Drive</button>
     </div>
     <div class="message" id="message"></div>
     <div class="table-container">
@@ -103,5 +105,23 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
+  <!-- Google Drive API -->
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script>
+    // Initialize Google Drive API
+    function initClient() {
+      gapi.client.init({
+        'apiKey': 'AIzaSyBje9vqLf8VztDQFeUK9L2taoQSOkAmyKU',
+        'clientId': '361917531086-00so09i12lmbnfjnmj2o1f17c3scg7sl.apps.googleusercontent.com',
+        'scope': 'https://www.googleapis.com/auth/drive.file',
+        'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest']
+      }).then(function() {
+        console.log('Google Drive API initialized.');
+      }).catch(function(error) {
+        console.error('Error initializing Google Drive API:', error);
+      });
+    }
+    gapi.load('client:auth2', initClient);
+  </script>
 </body>
 </html>
