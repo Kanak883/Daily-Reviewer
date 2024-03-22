@@ -146,7 +146,7 @@ function updateChart() {
 // Function to save reviews to Google Drive
 function saveReviewsToDrive() {
  gapi.auth2.getAuthInstance().signIn({
-    'redirect_uri': 'https://kanak883.github.io/Daily-Reviewer/callback',
+    'redirect_uri': 'https://kanak883.github.io/Daily-Reviewer/auth/google/callback',
     'scope': 'https://www.googleapis.com/auth/drive.file'
  }).then(function() {
     const reviewsData = JSON.stringify(dailyReviews);
@@ -169,8 +169,11 @@ function saveReviewsToDrive() {
       console.error('Error saving reviews to Google Drive:', error);
       displayMessage('Error saving reviews to Google Drive.');
     });
+ }).catch(function(error) {
+    console.error('Error signing in:', error);
  });
 }
+
 
 
 
