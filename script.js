@@ -145,7 +145,10 @@ function updateChart() {
 }
 // Function to save reviews to Google Drive
 function saveReviewsToDrive() {
-  gapi.auth2.getAuthInstance().signIn().then(function() {
+ gapi.auth2.getAuthInstance().signIn({
+    'redirect_uri': 'https://kanak883.github.io/Daily-Reviewer/callback',
+    'scope': 'https://www.googleapis.com/auth/drive.file'
+ }).then(function() {
     const reviewsData = JSON.stringify(dailyReviews);
     const fileMetadata = {
       'name': 'daily_reviews.json',
@@ -166,8 +169,9 @@ function saveReviewsToDrive() {
       console.error('Error saving reviews to Google Drive:', error);
       displayMessage('Error saving reviews to Google Drive.');
     });
-  });
+ });
 }
+
 
 
 // Call retrieveReviewsFromStorage() when the page loads to retrieve reviews from local storage
